@@ -8,12 +8,19 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.lang.Object;
+import java.awt.Color;
+import javax.swing.JFrame;
+
+
 
 public class GUI {
 
 
 	private final JFrame frame;
 	private final JPanel panel;
+	private final JPanel panel2;
+	private final JPanel panel3;
 	public JLabel label;
 	public JButton startServerButton;
 	public JButton maintenanceServerButton;
@@ -27,6 +34,7 @@ public class GUI {
 		frame.setSize(450,450);
 
 		startServerButton = new JButton("Start");
+
 //        startServerButton.addActionListener(this);
 		startServerButton.addActionListener(new ActionListener() {
 
@@ -120,14 +128,30 @@ public class GUI {
 		});
 		label = new JLabel("Not running");
 		panel = new JPanel();
-		panel.setBorder(BorderFactory.createEmptyBorder(200, 200, 200, 200));
+		panel.setBackground(Color.PINK);
+		panel.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50));
 		panel.setLayout(new GridLayout(0, 1));
-		panel.add(startServerButton);
-		panel.add(maintenanceServerButton);
 		panel.add(stopServerButton);
-		panel.add(label);
+		//panel.add(label);
 
+
+		panel2 = new JPanel();
+		panel2.setBackground(Color.PINK);
+		panel2.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50)) ;
+		panel2.add(startServerButton);
+		panel2.setLayout(new GridLayout(0, 1));
+
+		panel3 = new JPanel();
+		panel3.setBackground(Color.PINK);
+		panel3.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50)) ;
+		panel3.add(maintenanceServerButton);
+		panel3.setLayout(new GridLayout(0, 1));
+
+		frame.getContentPane().setBackground(Color.GREEN);
 		frame.add(panel, BorderLayout.CENTER);
+		frame.add(panel2, BorderLayout.WEST);
+		frame.add(panel3, BorderLayout.EAST );
+		frame.add(label, BorderLayout.SOUTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("WebServer GUI");
 		frame.pack();
