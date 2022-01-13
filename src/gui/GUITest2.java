@@ -31,7 +31,7 @@ public class GUITest2 {
         assertEquals("In maintenance",g.label.getText());
     }
     @Test
-    public void GUI() throws  PortOutOfBoundException, UsedPortException{
+    public void clickStopServerButton() throws  PortOutOfBoundException, UsedPortException{
         GUI g=new GUI();
         JButton j=new JButton();
         g.stopServerButton.doClick();
