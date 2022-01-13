@@ -62,22 +62,6 @@ public class WebServerTest {
 	    assertEquals("Could not close port: 10008.", errContent.toString());
 	}
 
-	//try to test webServer for behaviour when there are manny requests in a small time interval*/
-	@Test
-	public void mannyRequestSendedTest() {
-		HttpURLConnection connection = null;
-		try {
-		for(int i=0; i<10; i++) {
-			 URL url = new URL("http://127.0.0.1:8080");
-	         connection = (HttpURLConnection) url.openConnection();
-		}
-		}catch(IOException e) {
-			fail();
-		}
-	}
-
-
-
     @Test
    public void requestTest() {
       HttpURLConnection connection = null;
