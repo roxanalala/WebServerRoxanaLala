@@ -128,21 +128,5 @@ public class WebServerTest {
 		assertEquals("text/plain",reps);
 	}
 
-	/*@Test
-	public void fileNotFoundErr() throws IOException {
 
-		Configuration con= new Configuration();
-		ConfigManager configManager=new ConfigManager(con);
-		Socket soc=new Socket();
-		WebServer sv=new WebServer(soc,configManager);
-
-		ServerSocket ss=new ServerSocket(6666);
-		Socket s=ss.accept();
-		PrintWriter out = new PrintWriter(s.getOutputStream());
-		OutputStream dataOut = new BufferedOutputStream(s.getOutputStream());
-
-		con.verbose=true;
-		sv.fileNotFound(out,dataOut,"fisier");
-		assertEquals("File fisier not found",outContent.toString().trim());
-	}*/
 }
