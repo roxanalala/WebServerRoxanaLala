@@ -21,17 +21,17 @@ public class GUITest {
         GUI g=new GUI();
         JButton j=new JButton();
         g.startServerButton.doClick();
-        assertEquals("Server is running on port 8080 ",g.label.getText());
+        assertEquals("Server is running",g.label.getText());
     }
     @Test
     public void clickMaintenanceButton() throws  PortOutOfBoundException, UsedPortException{
         GUI g=new GUI();
         JButton j=new JButton();
         g.maintenanceServerButton.doClick();
-        assertEquals("Server is in maintenance ",g.label.getText());
+        assertEquals("In maintenance",g.label.getText());
     }
     @Test
-    public void GUI() throws  PortOutOfBoundException, UsedPortException{
+    public void clickStopServerButton() throws  PortOutOfBoundException, UsedPortException{
         GUI g=new GUI();
         JButton j=new JButton();
         g.stopServerButton.doClick();
